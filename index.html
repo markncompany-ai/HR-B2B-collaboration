@@ -148,6 +148,44 @@ footer{margin-top:36px;padding-top:15px;border-top:1px solid var(--line);font-si
 .stub{border:1px dashed var(--line);border-radius:11px;padding:44px 24px;text-align:center;color:var(--ink3);background:var(--surface)}
 .stub b{display:block;font-size:15px;color:var(--ink2);margin-bottom:6px}
 
+
+/* ── PART 2 ── */
+.flow{display:flex;gap:0;flex-wrap:wrap;margin:14px 0 8px}
+.step{flex:1;min-width:118px;border:1px solid var(--line);border-radius:9px;padding:13px 12px;background:#fff;position:relative;margin-right:22px}
+.step:last-child{margin-right:0}
+.step:not(:last-child):after{content:"→";position:absolute;right:-17px;top:50%;transform:translateY(-50%);color:var(--ink3);font-size:16px;font-weight:700}
+.step .t{font-size:10.5px;font-weight:800;color:var(--g);letter-spacing:.3px;margin-bottom:6px}
+.step .d{font-size:12.4px;color:var(--ink2);line-height:1.5}
+.step.us{background:var(--gl);border-color:var(--g)}
+.step.rm{background:#f0f2f5;border-color:#c9d0d8}
+.step.rm .t{color:#4a5560}
+.flownote{font-size:12.6px;color:var(--ink2);line-height:1.68;margin:10px 0 0;padding-left:13px;border-left:2px solid var(--line)}
+.flownote b{color:var(--gd)}
+.wheelbox{border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:22px 18px 14px;margin:20px 0 8px;text-align:center}
+.wheelbox svg{max-width:100%;height:auto}
+.wheelcap{font-size:12.5px;color:var(--ink2);margin-top:12px;line-height:1.65;text-align:left;padding:0 6px}
+.wheelcap b{color:var(--gd)}
+.rnr{border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:16px 0 8px}
+.rnr .h{padding:12px 15px;font-size:13.5px;font-weight:800;background:var(--gl);color:var(--gd)}
+.rnr .h.gray{background:#eef0ef;color:var(--ink)}
+.rnr table{margin:0}
+.rnr td:first-child{width:34px;text-align:center;color:var(--ink3);font-weight:400}
+table.num td:first-child{width:32px;text-align:center;color:var(--ink3);font-weight:400}
+.pri{display:inline-block;font-size:10.5px;font-weight:800;padding:2px 8px;border-radius:20px;white-space:nowrap}
+.pri.p1{background:var(--gd);color:#fff}
+.pri.p2{background:var(--gl);color:var(--gd);border:1px solid var(--g)}
+.pri.p3{background:#f0f2f5;color:#6b7580}
+.note{font-size:13px;color:var(--ink2);line-height:1.72;margin:12px 0 0}
+.note b{color:var(--ink)}
+.closing{margin-top:50px;padding:24px 26px;background:var(--gd);border-radius:11px;color:#fff}
+.closing p{font-size:15.5px;font-weight:600;margin:0 0 9px;line-height:1.72}
+.closing p:last-child{margin:0;font-size:13.5px;font-weight:400;opacity:.88}
+@media(max-width:700px){
+  .flow{display:block}
+  .step{margin-right:0;margin-bottom:22px}
+  .step:not(:last-child):after{content:"↓";right:50%;top:auto;bottom:-18px;transform:translateX(50%)}
+}
+
 @media print{
   .tabs,.pagenav{display:none!important}
   .page[hidden]{display:block!important}
@@ -467,16 +505,233 @@ footer{margin-top:36px;padding-top:15px;border-top:1px solid var(--line);font-si
 
 <!-- ══════════ PAGE 2 ══════════ -->
 <div class="page" id="p2" hidden>
+  <!-- 04 -->
   <section>
     <h2><span class="n">04</span>동작 방식 — 하나의 선순환</h2>
-    <div class="stub">
-      <b>작성 중</b>
-      구직자 흐름 · 기업 발굴 흐름 · 통합 플라이휠 도식과 R&amp;R이 이 페이지에 들어갑니다.
+    <div class="head">
+      구직자 흐름과 기업 발굴 흐름은 <b>따로 도는 두 개의 프로세스가 아니라 하나의 순환</b>입니다.
+      인증서가 퍼질수록 기업이 유입되고, 기업이 늘수록 구직자가 볼 것이 많아지며, 그 결과 다시 인증서가 퍼집니다.
+    </div>
+
+    <h3>구직자 흐름 — 모르는 회사를 지원까지 데려가는 경로</h3>
+    <div class="flow">
+      <div class="step"><div class="t">01</div><div class="d">공고 열람<br>또는 기업 검색</div></div>
+      <div class="step us"><div class="t">02 · 혁신의숲</div><div class="d">성장 리포트로<br>회사 확인</div></div>
+      <div class="step us"><div class="t">03 · 혁신의숲</div><div class="d">성장 경험<br>인증서 발급</div></div>
+      <div class="step rm"><div class="t">04 · 리멤버</div><div class="d">지원<br>이력서 + 인증서</div></div>
+    </div>
+    <p class="flownote">
+      <b>2·3단계가 혁신의숲이 맡는 구간입니다.</b> 「이 회사 괜찮은가」라는 질문에 답하는 자리이고,
+      여기가 비어 있으면 구직자는 회사 이름을 들고 다른 곳을 찾아다니다 이탈합니다.
+      지금 어느 채용 플랫폼에도 이 구간이 없습니다.
+    </p>
+
+    <h3>기업 발굴 흐름 — 「우리도 올리고 싶다」가 생기는 경로</h3>
+    <div class="flow">
+      <div class="step us"><div class="t">01 · 혁신의숲</div><div class="d">인증서·리포트를 본<br>기업의 문의</div></div>
+      <div class="step us"><div class="t">02 · 혁신의숲</div><div class="d">리드 접수<br>· 전달</div></div>
+      <div class="step rm"><div class="t">03 · 리멤버</div><div class="d">영업 · 상담</div></div>
+      <div class="step rm"><div class="t">04 · 리멤버</div><div class="d">계약 · 공고 등록</div></div>
+    </div>
+    <p class="flownote">
+      <b>영업과 계약은 리멤버가 하십니다.</b> 혁신의숲이 하는 일은 리드가 발생하는 자리를 만들고 전달하는 데까지입니다.
+      기업이 먼저 문의하게 만드는 것이 위 구직자 흐름의 결과물이라, 두 흐름은 붙어 있습니다.
+    </p>
+
+    <h3>두 흐름을 합치면 — 선순환 구조</h3>
+    <div class="wheelbox">
+      <svg viewBox="0 0 700 470" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="채용 선순환 구조">
+        <defs>
+          <marker id="ah" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L7,3 z" fill="#1c6b45"/>
+          </marker>
+        </defs>
+        <circle cx="350" cy="235" r="152" fill="none" stroke="#c6ddd0" stroke-width="2" stroke-dasharray="5 6"/>
+        <path d="M 455 128 A 152 152 0 0 1 490 210" fill="none" stroke="#1c6b45" stroke-width="2.4" marker-end="url(#ah)"/>
+        <path d="M 470 300 A 152 152 0 0 1 405 375" fill="none" stroke="#1c6b45" stroke-width="2.4" marker-end="url(#ah)"/>
+        <path d="M 290 378 A 152 152 0 0 1 213 315" fill="none" stroke="#1c6b45" stroke-width="2.4" marker-end="url(#ah)"/>
+        <path d="M 205 165 A 152 152 0 0 1 250 116" fill="none" stroke="#1c6b45" stroke-width="2.4" marker-end="url(#ah)"/>
+        <circle cx="350" cy="235" r="66" fill="#0f3f28"/>
+        <text x="350" y="224" text-anchor="middle" fill="#fff" font-size="14" font-weight="800" font-family="sans-serif">성장 데이터</text>
+        <text x="350" y="247" text-anchor="middle" fill="#c9f0d9" font-size="12.5" font-family="sans-serif">혁신의숲</text>
+        <g font-family="sans-serif">
+          <rect x="252" y="18" width="196" height="60" rx="10" fill="#e8f3ec" stroke="#1c6b45" stroke-width="1.6"/>
+          <text x="350" y="40" text-anchor="middle" font-size="11" font-weight="800" fill="#1c6b45">&#9312; 구직자</text>
+          <text x="350" y="59" text-anchor="middle" font-size="12.5" fill="#12100e">성장 경험 인증서 발급</text>
+          <rect x="486" y="180" width="200" height="60" rx="10" fill="#fff" stroke="#c6ddd0" stroke-width="1.6"/>
+          <text x="586" y="202" text-anchor="middle" font-size="11" font-weight="800" fill="#4b544d">&#9313; 지원</text>
+          <text x="586" y="221" text-anchor="middle" font-size="12.5" fill="#12100e">인증서가 기업에 도달</text>
+          <rect x="252" y="392" width="196" height="60" rx="10" fill="#e8f3ec" stroke="#1c6b45" stroke-width="1.6"/>
+          <text x="350" y="414" text-anchor="middle" font-size="11" font-weight="800" fill="#1c6b45">&#9314; 채용 기업</text>
+          <text x="350" y="433" text-anchor="middle" font-size="12.5" fill="#12100e">검증된 지원자로 성사율 상승</text>
+          <rect x="14" y="180" width="200" height="60" rx="10" fill="#fff" stroke="#c6ddd0" stroke-width="1.6"/>
+          <text x="114" y="202" text-anchor="middle" font-size="11" font-weight="800" fill="#4b544d">&#9315; 신규 수요</text>
+          <text x="114" y="221" text-anchor="middle" font-size="12.5" fill="#12100e">「우리도 올리고 싶다」</text>
+        </g>
+      </svg>
+      <div class="wheelcap">
+        <b>&#9312;</b> 구직자가 인증서를 발급받고 &rarr; <b>&#9313;</b> 지원과 함께 인증서가 채용 기업에 도달하며 &rarr;
+        <b>&#9314;</b> 기업은 검증된 지원자를 만나 성사율이 오르고 &rarr; <b>&#9315;</b> 그 결과를 본 다른 기업이 「우리도 여기 올리고 싶다」고 찾아옵니다.
+        공고가 늘면 구직자가 볼 것이 많아지고, 다시 &#9312;로 돌아갑니다.
+        <br><br>
+        <b>이 순환의 축은 혁신의숲의 성장 데이터입니다.</b> 데이터가 없으면 &#9312;의 인증서도 &#9314;의 검증도 성립하지 않습니다.
+        <b>신규 수요(&#9315;)는 이 순환의 출발점이 아니라 결과입니다.</b>
+      </div>
     </div>
   </section>
+
+  <!-- 05 -->
+  <section>
+    <h2><span class="n">05</span>R&amp;R</h2>
+    <div class="head">
+      혁신의숲은 <b>데이터와 검증</b>을, 리멤버는 <b>공고와 채용 실행</b>을 담당합니다.
+      아래 항목에는 우선순위가 있습니다 — <b>앞의 항목이 성립해야 뒤의 항목이 따라옵니다.</b>
+    </div>
+
+    <h3>먼저 맞추고 싶은 것 — 서로가 기대하는 바</h3>
+    <div class="vs">
+      <div class="col">
+        <div class="cap">리멤버가 기대하시는 것 · 저희가 이해한 바</div>
+        <div class="m">B2B 신규 고객 발굴</div>
+        <ul>
+          <li>혁신의숲을 보는 스타트업 의사결정자에게 닿는 것</li>
+          <li>영업과 계약은 리멤버가 수행</li>
+          <li>채용 성사 여부보다 계약 건수</li>
+        </ul>
+      </div>
+      <div class="col">
+        <div class="cap">마크앤컴퍼니가 목표하는 것</div>
+        <div class="m">스타트업의 채용이 실제로 성사되는 것</div>
+        <ul>
+          <li>성장 데이터가 결합되어야 공고가 차별화됨</li>
+          <li>차별화된 공고라야 지원이 늘고 성사율이 오름</li>
+          <li>성사가 늘면 신규 수요가 따라옴</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">
+      좌측은 8/25 논의에서 <b>저희가 이해한 범위</b>이며 합의된 내용이 아닙니다 — 다르게 보고 계시다면 목요일 자리에서 바로잡아 주시기 바랍니다.
+      <br>
+      두 목표는 <b>충돌하지 않습니다. 다만 순서가 다릅니다.</b>
+      저희는 신규 수요를 <b>결과</b>로 보고 있고, 그 결과를 만들어 내는 장치가 데이터 결합이라고 보고 있습니다.
+      세일즈만 떼어내면 양사가 같은 상품을 파는 구조가 되어 오래 가기 어렵다는 것이 저희 판단입니다.
+    </p>
+
+    <div class="rnr" style="margin-top:26px">
+      <div class="h">혁신의숲이 제공하는 것</div>
+      <table class="num">
+        <tr><th>#</th><th>내용</th><th style="width:132px">성격</th></tr>
+        <tr><td>1</td><td>리멤버 공고에 성장 데이터를 결합해 스타트업 채용에 맞는 형태로 재구성</td><td><span class="pri p1">기본 구조</span></td></tr>
+        <tr><td>2</td><td>스타트업 정보를 찾는 구직자에게 해당 공고 노출</td><td><span class="pri p1">기본 구조</span></td></tr>
+        <tr><td>3</td><td>지원자와 기업의 적합성 판단 근거 제공 (성장 경험 인증서)</td><td><span class="pri p1">기본 구조</span></td></tr>
+        <tr><td>4</td><td>지원 트래픽을 리멤버로 연결</td><td><span class="pri p2">1~3의 결과</span></td></tr>
+        <tr><td>5</td><td>신규 리드 발굴 시 리멤버로 전달 (영업은 리멤버가 수행)</td><td><span class="pri p2">1~3의 결과</span></td></tr>
+        <tr><td>6</td><td>광고 게재, 제휴 노출, 공동 행사 연계</td><td><span class="pri p3">즉시 가능</span></td></tr>
+      </table>
+    </div>
+    <p class="note">
+      <b>4번과 5번은 별도로 약속하는 항목이 아니라 1~3번이 작동하면 따라오는 결과입니다.</b>
+      공고가 더 나은 형태로 노출되면 지원이 늘고, 그 결과를 본 기업이 문의하면 그것이 곧 신규 리드입니다.
+      <br>
+      <b>6번은 함께 한다는 전제만 서면 시스템 구축을 기다리지 않고 지금 바로 제공할 수 있습니다.</b>
+    </p>
+
+    <div class="rnr" style="margin-top:26px">
+      <div class="h gray">리멤버에 요청드리는 것</div>
+      <table class="num">
+        <tr><th>#</th><th>내용</th><th style="width:132px">우선순위</th></tr>
+        <tr><td>1</td><td><b>채용 공고 데이터 API 제공</b></td><td><span class="pri p1">최우선</span></td></tr>
+        <tr><td>2</td><td>발급된 이력서·성장 경험 인증서를 회신할 수 있는 API 연동</td><td><span class="pri p2">다음 순서</span></td></tr>
+        <tr><td>3</td><td>채용 성사 시 수익 배분</td><td><span class="pri p3">이후 협의</span></td></tr>
+        <tr><td>4</td><td>채용 관련 공동 메시지·홍보 협력</td><td><span class="pri p3">이후 협의</span></td></tr>
+      </table>
+    </div>
+    <p class="note">
+      <b>1번이 가장 중요합니다.</b> 공고 데이터가 연결되어야 성장 리포트가 생성되고, 그래야 구직자 흐름이 시작됩니다.
+      <b>2번은 그 흐름의 마지막을 잇는 연결</b>로, 1번이 되면 자연히 따라오는 순서입니다.
+      3번과 4번은 구조가 작동하는 것을 확인한 뒤 논의해도 늦지 않다고 보고 있습니다.
+    </p>
+  </section>
+
+  <!-- 06 -->
+  <section>
+    <h2><span class="n">06</span>수익 구조</h2>
+    <div class="head">
+      <b>이번 문서에는 금액과 요율을 담지 않았습니다.</b>
+      구조가 실제로 작동하는 것을 확인한 뒤, 그때의 숫자를 함께 보고 정하는 것이 맞다고 보고 있기 때문입니다.
+      형태만 먼저 정리해 두었습니다.
+    </div>
+    <table class="num">
+      <tr><th>#</th><th style="width:200px">구분</th><th>대상</th><th style="width:150px">정산 근거</th></tr>
+      <tr>
+        <td>1</td><td><b>인증서 경유 성사</b></td>
+        <td>혁신의숲을 통해 지원해 채용이 성사된 건</td>
+        <td>인증서가 지원과 함께 전달되므로 경유 여부 확인 가능</td>
+      </tr>
+      <tr>
+        <td>2</td><td><b>신규 리드 세일즈</b></td>
+        <td>혁신의숲이 발굴해 전달한 리드가 계약으로 이어진 건</td>
+        <td>리드 전달 시점 기록</td>
+      </tr>
+    </table>
+    <p class="note">
+      요율은 비워 두었습니다. <b>공고 연동(아래 3단계) 이후 지원 수와 성사율을 함께 확인하고, 그 결과를 근거로 협의드리겠습니다.</b>
+    </p>
+  </section>
+
+  <!-- 07 -->
+  <section>
+    <h2><span class="n">07</span>추진 순서 제안</h2>
+    <div class="head">
+      신규 고객 발굴은 마크앤컴퍼니도 중요하게 보고 있으며,
+      <b>협업 방향에 합의만 이루어지면 홍보·노출은 지금 바로 시작할 수 있습니다.</b>
+      다만 그것이 일회성으로 끝나지 않으려면 공고 데이터 연동이 함께 가야 합니다.
+    </div>
+    <table class="num">
+      <tr><th>#</th><th style="width:170px">단계</th><th>내용</th><th style="width:112px">시점</th></tr>
+      <tr>
+        <td>1</td><td><b>협업 방향 합의</b></td>
+        <td>본 제안의 구조에 대한 상호 확인. 이 단계만 서면 아래 2번은 즉시 진행 가능합니다.</td>
+        <td>즉시</td>
+      </tr>
+      <tr>
+        <td>2</td><td>홍보 · 노출 · 공동 활동</td>
+        <td>혁신의숲 내 리멤버 채용 솔루션 노출, 공동 콘텐츠, 행사 연계. <b>얼마든지 먼저 제공할 수 있습니다.</b></td>
+        <td>합의 직후</td>
+      </tr>
+      <tr>
+        <td>3</td><td><b>채용 공고 연동</b></td>
+        <td>협업 전제 하에 <b>공고 API 연동부터 시작</b>합니다. 공고가 들어와야 성장 리포트가 생성되고 구직자 흐름이 열립니다.</td>
+        <td>합의 직후 착수</td>
+      </tr>
+      <tr>
+        <td>4</td><td>인증서 · 지원 연결</td>
+        <td>성장 경험 인증서 발급과 지원 연동, 이력서·인증서 회신까지 연결합니다.</td>
+        <td>3단계에 이어서</td>
+      </tr>
+      <tr>
+        <td>5</td><td>운영 및 성과 확인</td>
+        <td>지원 수와 성사율 데이터를 함께 확인하고, 그 결과를 바탕으로 수익 배분을 협의합니다.</td>
+        <td>연동 이후</td>
+      </tr>
+    </table>
+
+    <div class="ask">
+      <div class="t">B2B 세일즈에 대한 저희 입장</div>
+      <p>세일즈 협력을 <span class="em">먼저 하지 말자는 뜻이 아닙니다.</span> 위 2단계는 합의만 되면 바로 시작할 수 있습니다.</p>
+      <p>다만 세일즈만 떼어 진행하면 양사가 같은 상품을 파는 구조가 되고, 채용이 주력이 아닌 저희가 영업에서 더 잘할 이유가 없습니다.
+        <span class="em">데이터가 결합되어야 상품이 달라지고, 달라져야 팔립니다.</span></p>
+      <p>저희에게 신규 수요는 목표가 아니라 <span class="em">구조가 돌아갈 때 따라오는 결과</span>입니다.</p>
+    </div>
+  </section>
+
+  <div class="closing">
+    <p>마크앤컴퍼니가 이 사업에서 기대하는 것은 수익 그 자체보다, 스타트업이 좋은 인재를 만나는 문제를 실제로 푸는 것입니다.</p>
+    <p>리멤버가 기대하시는 바를 같은 형태로 정리해 주시면, 두 문서를 놓고 접점을 함께 찾아보고자 합니다.</p>
+  </div>
   <div class="pagenav">
     <button class="nextbtn ghost" data-goto="p1">← PART 1 — 문제와 제안</button>
-    <span class="hint"></span>
+    <span class="hint">본 문서의 모든 항목은 협의를 통해 조정될 수 있습니다.</span>
   </div>
 </div>
 
