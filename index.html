@@ -17,7 +17,7 @@
 body{margin:0;background:var(--bg);color:var(--ink);
   font-family:-apple-system,BlinkMacSystemFont,"Malgun Gothic","Apple SD Gothic Neo","Noto Sans KR",sans-serif;
   font-size:14.5px;line-height:1.75;}
-.wrap{max-width:880px;margin:0 auto;padding:40px 26px 72px}
+.wrap{max-width:1280px;margin:0 auto;padding:38px 34px 72px}
 
 header{margin-bottom:22px;padding-bottom:20px;border-bottom:2px solid var(--ink)}
 .brand{font-size:11.5px;font-weight:800;letter-spacing:1.5px;color:var(--g);margin-bottom:13px}
@@ -179,6 +179,7 @@ table.num td:first-child{width:32px;text-align:center;color:var(--ink3);font-wei
   .step:not(:last-child):after{content:"↓";right:50%;top:auto;bottom:-18px;transform:translateX(50%)}
 }
 
+@page{size:338mm 190mm;margin:13mm}
 @media print{
   .tabs,.pagenav{display:none!important}
   .page[hidden]{display:block!important}
@@ -191,29 +192,51 @@ table.num td:first-child{width:32px;text-align:center;color:var(--ink3);font-wei
 }
 
 /* 서술 블록 3열 카드 */
-.why3{display:grid;grid-template-columns:repeat(auto-fit,minmax(178px,1fr));gap:10px;margin:14px 0 4px}
-.why3 .c{border:1px solid var(--line);border-radius:9px;background:var(--surface);padding:13px 14px}
-.why3 .c .t{font-size:11px;font-weight:800;letter-spacing:.3px;color:var(--g);margin-bottom:8px;padding-bottom:7px;border-bottom:1px solid var(--line)}
-.why3 .c .d{font-size:12.3px;color:var(--ink2);line-height:1.62}
+.why3{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:11px;margin:15px 0 4px;align-items:stretch}
+.why3 .c{border:1px solid var(--line);border-left:3px solid var(--g);border-radius:8px;
+  background:#fff;padding:14px 15px;display:flex;flex-direction:column}
+.why3 .c .t{font-size:11.5px;font-weight:800;letter-spacing:.2px;color:var(--gd);margin-bottom:10px}
+.why3 .c .d{font-size:12.3px;color:var(--ink2);line-height:1.68}
 .why3 .c .d b{color:var(--ink)}
+.why3 .c .lead{font-size:12.6px;color:var(--ink);font-weight:700;line-height:1.55;margin-bottom:9px}
+.why3 .c .st{display:block;padding-left:16px;text-indent:-16px;margin-bottom:3px}
+.why3 .c .st em{font-style:normal;font-weight:800;color:var(--g)}
 /* 플랫폼 로고 자리 */
 .logos{display:flex;gap:3px;justify-content:flex-start;margin-top:10px;flex-wrap:nowrap}
-.logos span{width:29px;height:29px;min-width:29px;border-radius:50%;background:#fff;
+.logos span{width:32px;height:32px;min-width:32px;border-radius:50%;background:#fff;
   border:1px solid var(--line);display:flex;align-items:center;justify-content:center;
   font-size:6.6px;font-weight:800;color:#5a6570;letter-spacing:-.4px;line-height:1;
   white-space:nowrap;overflow:hidden}
+.logos span img{width:24px;height:24px;object-fit:contain;display:block}
 .step.wide{flex:1.75}
 @media (max-width:760px){.why3{grid-template-columns:1fr}}
+
+/* 와이드(16:9) 대응 */
+@media (min-width:1000px){
+  .stats{grid-template-columns:repeat(3,1fr);gap:18px}
+  .eff{grid-template-columns:repeat(3,1fr);gap:16px}
+  .why3{grid-template-columns:repeat(3,1fr);gap:14px}
+  .struct{gap:16px}
+  .prod .body{padding:20px 24px}
+  .prod .body p{font-size:13.6px}
+  .why3 .c .d,.vs li{font-size:12.8px}
+  .flow{gap:0}
+  .step{min-width:150px}
+  .flownote{font-size:13px}
+  .wheelbox{padding:26px 22px 16px}
+  .wheelcap{max-width:1000px;margin-left:auto;margin-right:auto;font-size:13px}
+}
 </style>
 </head>
 <body>
+<!-- v4.0 -->
 <div class="wrap">
 
 <header>
   <div class="brand">혁신의숲 · MARK &amp; COMPANY</div>
   <h1>스타트업 채용 제휴 제안</h1>
   <p class="sub">마크앤컴퍼니가 그리는 스타트업 채용의 구조</p>
-  <div class="hdr-meta"><span>2026. 08.</span><span>마크앤컴퍼니 혁신의숲</span><span>v3.5</span></div>
+  <div class="hdr-meta"><span>2026. 08.</span><span>마크앤컴퍼니 혁신의숲</span></div>
 </header>
 
 <div class="tabs" role="tablist">
@@ -381,9 +404,32 @@ table.num td:first-child{width:32px;text-align:center;color:var(--ink3);font-wei
       성장 폭과 수익성을 상단에 배치하고, 그 아래로 <b>왜 지금이 합류 시점인지, 어떤 문제를 푸는 회사인지, 서비스는 실제로 사용되고 있는지, 조직은 확장되고 있는지</b>를 순서대로 답합니다.</p>
 
       <div class="why3">
-        <div class="c"><div class="t">왜 이렇게 만들었나</div><div class="d"><b>모르는 회사를 마주한 구직자가 지원까지 가려면 순서가 있습니다.</b> ① 이 회사가 뭐 하는 곳인가 → ② 망하지 않고 굴러가는가(안정성) → ③ 지금 크고 있는가(성장성) → ④ 그래서 내가 갈 만한가. 이 네 가지가 <b>객관적인 숫자로</b> 채워져야 신뢰가 생기고, 신뢰가 생겨야 관심이 생기며, 관심이 생겨야 지원합니다. 회사가 스스로 쓴 소개문으로는 이 단계를 넘지 못합니다 — 누구나 좋게 쓰기 때문입니다.</div></div>
-        <div class="c"><div class="t">무엇으로 답하나</div><div class="d"><b>성장성</b> — 매출·영업이익 추이, 월 순방문자(MUV) 증감, 조직 확장 속도<br> <b>안정성</b> — 재무상태, 투자 라운드와 투자자 구성, 흑자 여부<br> <b>진짜 하는 일</b> — 어떤 문제를 푸는지, 국가 R&amp;D 과제, 대표 인터뷰<br> <b>사람의 움직임</b> — 입·퇴사 시계열로 본 조직의 실제 상태</div></div>
-        <div class="c"><div class="t">이것이 만드는 것</div><div class="d">구직자에게 「모르는 회사」가 <b>「데이터로 확인한 성장 기업」</b>으로 바뀝니다.</div></div>
+        <div class="c">
+          <div class="t">구직자가 거치는 4단계</div>
+          <div class="lead">모르는 회사를 마주한 구직자가 지원까지 가려면 순서가 있습니다.</div>
+          <div class="d">
+            <span class="st"><em>①</em> 이 회사가 뭐 하는 곳인가</span>
+            <span class="st"><em>②</em> 망하지 않고 굴러가는가 (안정성)</span>
+            <span class="st"><em>③</em> 지금 크고 있는가 (성장성)</span>
+            <span class="st"><em>④</em> 그래서 내가 갈 만한가</span>
+          </div>
+        </div>
+        <div class="c">
+          <div class="t">각 단계에 답하는 데이터</div>
+          <div class="d">
+            <span class="st"><em>성장성</em> 매출과 영업이익 추이, 월 순방문자(MUV) 증감, 조직 확장 속도</span>
+            <span class="st"><em>안정성</em> 재무상태, 투자 라운드와 투자자 구성, 흑자 여부</span>
+            <span class="st"><em>사업</em> 어떤 문제를 푸는지, 국가 R&amp;D 과제, 대표 인터뷰</span>
+            <span class="st"><em>조직</em> 입·퇴사 시계열로 본 조직의 실제 상태</span>
+          </div>
+        </div>
+        <div class="c">
+          <div class="t">이것이 만드는 것</div>
+          <div class="lead">네 단계가 객관적인 숫자로 채워지면 신뢰가 생깁니다.</div>
+          <div class="d">신뢰가 관심을 만들고, 관심이 지원으로 이어집니다.
+          회사가 스스로 쓴 소개문은 이 단계를 넘지 못합니다. 누구나 좋게 쓰기 때문입니다.<br><br>
+          구직자에게 「모르는 회사」가 <b>「데이터로 확인한 성장 기업」</b>으로 바뀝니다.</div>
+        </div>
       </div>
     </div>
   </div>
@@ -498,7 +544,7 @@ table.num td:first-child{width:32px;text-align:center;color:var(--ink3);font-wei
         <div class="t">01</div>
         <div class="d">여러 채용 플랫폼에서 공고 열람</div>
         <div class="logos" aria-label="채용 플랫폼">
-          <span>리멤버</span><span>원티드</span><span>그룹바이</span><span>잡코리아</span><span>사람인</span>
+          <span title="리멤버"><img src="https://cdn.rememberapp.co.kr/web/favicon-light.ico" alt="리멤버" loading="lazy" onerror="this.parentNode.textContent='리멤버'"></span><span title="원티드"><img src="https://static.wanted.co.kr/favicon/new/apple-touch-icon-57x57.png" alt="원티드" loading="lazy" onerror="this.parentNode.textContent='원티드'"></span><span title="그룹바이"><img src="https://groupby.kr/apple-touch-icon.png" alt="그룹바이" loading="lazy" onerror="this.parentNode.textContent='그룹바이'"></span><span title="잡코리아"><img src="https://www.jobkorea.co.kr/display/images/favicon.png" alt="잡코리아" loading="lazy" onerror="this.parentNode.textContent='잡코리아'"></span><span title="사람인"><img src="https://www.saramin.co.kr/favicon.ico?ver=3" alt="사람인" loading="lazy" onerror="this.parentNode.textContent='사람인'"></span>
         </div>
       </div>
       <div class="step us"><div class="t">02 · 혁신의숲</div><div class="d">기업 검색, 성장 리포트로 회사 확인</div></div>
@@ -553,71 +599,72 @@ table.num td:first-child{width:32px;text-align:center;color:var(--ink3);font-wei
 
     <h3>두 흐름의 결합</h3>
     <div class="wheelbox">
-      <svg viewBox="0 0 700 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="스타트업 채용 선순환 구조와 파생 효과">
+      <svg viewBox="0 0 1120 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="스타트업 채용 선순환 구조와 파생 효과">
         <defs>
           <marker id="ah" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
             <path d="M0,0 L0,6 L7,3 z" fill="#1c6b45"/>
           </marker>
+          <marker id="ahb" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L7,3 z" fill="#7ba490"/>
+          </marker>
         </defs>
 
-        <!-- 순환 링 -->
-        <circle cx="350" cy="250" r="130" fill="none" stroke="#c6ddd0" stroke-width="2" stroke-dasharray="5 6"/>
-        <path d="M 441.9 158.1 A 130 130 0 0 1 472.2 205.5" fill="none" stroke="#1c6b45" stroke-width="2.4" marker-end="url(#ah)"/>
-        <path d="M 472.2 294.5 A 130 130 0 0 1 441.9 341.9" fill="none" stroke="#1c6b45" stroke-width="2.4" marker-end="url(#ah)"/>
-        <path d="M 258.1 341.9 A 130 130 0 0 1 227.8 294.5" fill="none" stroke="#1c6b45" stroke-width="2.4" marker-end="url(#ah)"/>
-        <path d="M 227.8 205.5 A 130 130 0 0 1 258.1 158.1" fill="none" stroke="#1c6b45" stroke-width="2.4" marker-end="url(#ah)"/>
+        <circle cx="560" cy="280" r="150" fill="none" stroke="#c6ddd0" stroke-width="2" stroke-dasharray="5 6"/>
+        <path d="M 666 174 A 150 150 0 0 1 701 229" fill="none" stroke="#1c6b45" stroke-width="2.6" marker-end="url(#ah)"/>
+        <path d="M 701 331 A 150 150 0 0 1 666 386" fill="none" stroke="#1c6b45" stroke-width="2.6" marker-end="url(#ah)"/>
+        <path d="M 454 386 A 150 150 0 0 1 419 331" fill="none" stroke="#1c6b45" stroke-width="2.6" marker-end="url(#ah)"/>
+        <path d="M 419 229 A 150 150 0 0 1 454 174" fill="none" stroke="#1c6b45" stroke-width="2.6" marker-end="url(#ah)"/>
 
-        <!-- 파생 효과로 뻗는 가지 -->
-        <path d="M 258 158 L 200 132" stroke="#a9bcb0" stroke-width="1.4" stroke-dasharray="3 4" fill="none"/>
-        <path d="M 442 158 L 500 132" stroke="#a9bcb0" stroke-width="1.4" stroke-dasharray="3 4" fill="none"/>
-        <path d="M 442 342 L 500 368" stroke="#a9bcb0" stroke-width="1.4" stroke-dasharray="3 4" fill="none"/>
-        <path d="M 258 342 L 200 368" stroke="#a9bcb0" stroke-width="1.4" stroke-dasharray="3 4" fill="none"/>
+        <!-- 순환에서 갈라져 나오는 파생 화살표 -->
+        <path d="M 454 174 Q 355 130 254 150" fill="none" stroke="#7ba490" stroke-width="2.2" marker-end="url(#ahb)"/>
+        <path d="M 666 174 Q 765 130 866 150" fill="none" stroke="#7ba490" stroke-width="2.2" marker-end="url(#ahb)"/>
+        <path d="M 454 386 Q 355 430 254 410" fill="none" stroke="#7ba490" stroke-width="2.2" marker-end="url(#ahb)"/>
+        <path d="M 666 386 Q 765 430 866 410" fill="none" stroke="#7ba490" stroke-width="2.2" marker-end="url(#ahb)"/>
+        <circle cx="454" cy="174" r="4.5" fill="#1c6b45"/><circle cx="666" cy="174" r="4.5" fill="#1c6b45"/>
+        <circle cx="454" cy="386" r="4.5" fill="#1c6b45"/><circle cx="666" cy="386" r="4.5" fill="#1c6b45"/>
 
-        <!-- 중심: 성장 데이터 -->
-        <circle cx="350" cy="250" r="60" fill="#e9f4ee" stroke="#1c6b45" stroke-width="2"/>
-        <text x="350" y="243" text-anchor="middle" font-size="12" font-weight="800" fill="#1c6b45">혁신의숲</text>
-        <text x="350" y="261" text-anchor="middle" font-size="12" font-weight="800" fill="#1c6b45">성장 데이터</text>
+        <circle cx="560" cy="280" r="72" fill="#e9f4ee" stroke="#1c6b45" stroke-width="2.2"/>
+        <text x="560" y="272" text-anchor="middle" font-size="14" font-weight="800" fill="#1c6b45">혁신의숲</text>
+        <text x="560" y="293" text-anchor="middle" font-size="14" font-weight="800" fill="#1c6b45">성장 데이터</text>
 
-        <!-- 순환 4단계 -->
         <g>
-          <rect x="275" y="52" width="150" height="50" rx="10" fill="#fff" stroke="#1c6b45" stroke-width="1.6"/>
-          <text x="350" y="72" text-anchor="middle" font-size="10.5" font-weight="800" fill="#1c6b45">&#9312; 구직자</text>
-          <text x="350" y="90" text-anchor="middle" font-size="12" fill="#12100e">성장 경험 인증서 발급</text>
+          <rect x="470" y="56" width="180" height="58" rx="11" fill="#fff" stroke="#1c6b45" stroke-width="1.8"/>
+          <text x="560" y="80" text-anchor="middle" font-size="11.5" font-weight="800" fill="#1c6b45">&#9312; 구직자</text>
+          <text x="560" y="100" text-anchor="middle" font-size="13" fill="#12100e">성장 경험 인증서 발급</text>
 
-          <rect x="470" y="225" width="160" height="50" rx="10" fill="#fff" stroke="#1c6b45" stroke-width="1.6"/>
-          <text x="550" y="245" text-anchor="middle" font-size="10.5" font-weight="800" fill="#1c6b45">&#9313; 지원</text>
-          <text x="550" y="263" text-anchor="middle" font-size="12" fill="#12100e">인증서가 기업에 전달</text>
+          <rect x="715" y="251" width="190" height="58" rx="11" fill="#fff" stroke="#1c6b45" stroke-width="1.8"/>
+          <text x="810" y="275" text-anchor="middle" font-size="11.5" font-weight="800" fill="#1c6b45">&#9313; 지원</text>
+          <text x="810" y="295" text-anchor="middle" font-size="13" fill="#12100e">인증서가 기업에 전달</text>
 
-          <rect x="275" y="398" width="150" height="50" rx="10" fill="#fff" stroke="#1c6b45" stroke-width="1.6"/>
-          <text x="350" y="418" text-anchor="middle" font-size="10.5" font-weight="800" fill="#1c6b45">&#9314; 채용 기업</text>
-          <text x="350" y="436" text-anchor="middle" font-size="12" fill="#12100e">검증된 지원자로 성사율 상승</text>
+          <rect x="470" y="446" width="180" height="58" rx="11" fill="#fff" stroke="#1c6b45" stroke-width="1.8"/>
+          <text x="560" y="470" text-anchor="middle" font-size="11.5" font-weight="800" fill="#1c6b45">&#9314; 채용 기업</text>
+          <text x="560" y="490" text-anchor="middle" font-size="13" fill="#12100e">검증된 지원자로 성사율 상승</text>
 
-          <rect x="70" y="225" width="160" height="50" rx="10" fill="#fff" stroke="#c6ddd0" stroke-width="1.6"/>
-          <text x="150" y="245" text-anchor="middle" font-size="10.5" font-weight="800" fill="#4b544d">&#9315; 신규 수요</text>
-          <text x="150" y="263" text-anchor="middle" font-size="12" fill="#12100e">「우리도 올리고 싶다」</text>
+          <rect x="215" y="251" width="190" height="58" rx="11" fill="#fff" stroke="#c6ddd0" stroke-width="1.8"/>
+          <text x="310" y="275" text-anchor="middle" font-size="11.5" font-weight="800" fill="#4b544d">&#9315; 신규 수요</text>
+          <text x="310" y="295" text-anchor="middle" font-size="13" fill="#12100e">「우리도 올리고 싶다」</text>
         </g>
 
-        <!-- 파생 효과 4가지 -->
         <g>
-          <rect x="20" y="96" width="180" height="52" rx="9" fill="#f4f7f5" stroke="#c6ddd0" stroke-width="1.3"/>
-          <text x="110" y="115" text-anchor="middle" font-size="10" font-weight="800" fill="#4b544d">성장 기업 풀 축적</text>
-          <text x="110" y="132" text-anchor="middle" font-size="11" fill="#3c4550">공고와 성장 리포트가</text>
-          <text x="110" y="145" text-anchor="middle" font-size="11" fill="#3c4550">쌓일수록 탐색 대상 확대</text>
+          <rect x="20" y="120" width="225" height="62" rx="10" fill="#f4f7f5" stroke="#c6ddd0" stroke-width="1.4"/>
+          <text x="132" y="142" text-anchor="middle" font-size="11" font-weight="800" fill="#2c6b4d">성장 기업 풀 축적</text>
+          <text x="132" y="160" text-anchor="middle" font-size="11.5" font-weight="600" fill="#3c4550">공고와 성장 리포트가 쌓일수록</text>
+          <text x="132" y="175" text-anchor="middle" font-size="11.5" font-weight="600" fill="#3c4550">구직자의 탐색 대상 확대</text>
 
-          <rect x="500" y="96" width="180" height="52" rx="9" fill="#f4f7f5" stroke="#c6ddd0" stroke-width="1.3"/>
-          <text x="590" y="115" text-anchor="middle" font-size="10" font-weight="800" fill="#4b544d">검증된 인재 풀 축적</text>
-          <text x="590" y="132" text-anchor="middle" font-size="11" fill="#3c4550">발급 인증서가 늘수록</text>
-          <text x="590" y="145" text-anchor="middle" font-size="11" fill="#3c4550">지원자 검증 자산 확대</text>
+          <rect x="875" y="120" width="225" height="62" rx="10" fill="#f4f7f5" stroke="#c6ddd0" stroke-width="1.4"/>
+          <text x="987" y="142" text-anchor="middle" font-size="11" font-weight="800" fill="#2c6b4d">검증된 인재 풀 축적</text>
+          <text x="987" y="160" text-anchor="middle" font-size="11.5" font-weight="600" fill="#3c4550">발급 인증서가 늘수록</text>
+          <text x="987" y="175" text-anchor="middle" font-size="11.5" font-weight="600" fill="#3c4550">지원자 검증 자산 확대</text>
 
-          <rect x="500" y="352" width="180" height="52" rx="9" fill="#f4f7f5" stroke="#c6ddd0" stroke-width="1.3"/>
-          <text x="590" y="371" text-anchor="middle" font-size="10" font-weight="800" fill="#4b544d">리멤버 계약 확대</text>
-          <text x="590" y="388" text-anchor="middle" font-size="11" fill="#3c4550">채용 성사가 재계약과</text>
-          <text x="590" y="401" text-anchor="middle" font-size="11" fill="#3c4550">상위 상품 판매로 연결</text>
+          <rect x="20" y="378" width="225" height="62" rx="10" fill="#f4f7f5" stroke="#c6ddd0" stroke-width="1.4"/>
+          <text x="132" y="400" text-anchor="middle" font-size="11" font-weight="800" fill="#2c6b4d">신규 리드 세일즈</text>
+          <text x="132" y="418" text-anchor="middle" font-size="11.5" font-weight="600" fill="#3c4550">기업 문의가 리멤버</text>
+          <text x="132" y="433" text-anchor="middle" font-size="11.5" font-weight="600" fill="#3c4550">영업 퍼널로 유입</text>
 
-          <rect x="20" y="352" width="180" height="52" rx="9" fill="#f4f7f5" stroke="#c6ddd0" stroke-width="1.3"/>
-          <text x="110" y="371" text-anchor="middle" font-size="10" font-weight="800" fill="#4b544d">신규 리드 세일즈</text>
-          <text x="110" y="388" text-anchor="middle" font-size="11" fill="#3c4550">기업 문의가 리멤버</text>
-          <text x="110" y="401" text-anchor="middle" font-size="11" fill="#3c4550">영업 퍼널로 유입</text>
+          <rect x="875" y="378" width="225" height="62" rx="10" fill="#f4f7f5" stroke="#c6ddd0" stroke-width="1.4"/>
+          <text x="987" y="400" text-anchor="middle" font-size="11" font-weight="800" fill="#2c6b4d">리멤버 계약 확대</text>
+          <text x="987" y="418" text-anchor="middle" font-size="11.5" font-weight="600" fill="#3c4550">채용 성사가 재계약과</text>
+          <text x="987" y="433" text-anchor="middle" font-size="11.5" font-weight="600" fill="#3c4550">상위 상품 판매로 연결</text>
         </g>
       </svg>
       <div class="wheelcap">
