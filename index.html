@@ -264,10 +264,22 @@ h3,.vs .m,.ask p{font-size:15px}
 /* 섹션 제목 — flex 때문에 제목이 조기 줄바꿈되던 문제 수정 */
 h2{display:block!important;line-height:1.35}
 h2 .n{display:inline-block;margin-right:11px;vertical-align:2px}
+
+.legend{display:flex;flex-wrap:wrap;gap:10px 20px;justify-content:center;margin-top:14px;
+  padding-top:14px;border-top:1px solid var(--line);font-size:11.5px;color:var(--ink2)}
+.legend span{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;flex:none}
+.legend i{display:inline-block;width:22px;min-width:22px;height:0;border-top-width:2.4px;border-top-style:solid;flex:none}
+.legend i.l1{border-color:#1c6b45}
+.legend i.l2{border-color:#7ba490}
+.legend i.l3{border-color:#c08a3e}
+.legend i.l4{border-color:#7ba490;border-top-style:dashed}
+.legend i.sw{width:13px;height:13px;border:1px solid;border-radius:4px}
+.legend i.sw.g{background:#e9f4ee;border-color:#1c6b45}
+.legend i.sw.r{background:#f2f4f6;border-color:#ccd3da}
 </style>
 </head>
 <body>
-<!-- v4.3 -->
+<!-- v4.5 -->
 <div class="wrap">
 
 <header>
@@ -676,59 +688,65 @@ h2 .n{display:inline-block;margin-right:11px;vertical-align:2px}
         <text x="600" y="314" text-anchor="middle" font-size="14.5" font-weight="800" fill="#1c6b45">성장 데이터</text>
 
         <g>
-          <rect x="495" y="68" width="210" height="58" rx="11" fill="#fff" stroke="#1c6b45" stroke-width="1.8"/>
-          <text x="600" y="92" text-anchor="middle" font-size="11.5" font-weight="800" fill="#1c6b45">&#9312; 구직자</text>
-          <text x="600" y="112" text-anchor="middle" font-size="13" fill="#12100e">성장 경험 인증서 발급</text>
+          <rect x="495" y="66" width="210" height="62" rx="11" fill="#fff" stroke="#8f9aa3" stroke-width="1.8"/>
+          <text x="600" y="90" text-anchor="middle" font-size="11.5" font-weight="800" fill="#5a6570">&#9312; 구직자</text>
+          <text x="600" y="112" text-anchor="middle" font-size="13" fill="#12100e">성장 경험 인증서를 발급받는다</text>
 
-          <rect x="720" y="271" width="210" height="58" rx="11" fill="#fff" stroke="#1c6b45" stroke-width="1.8"/>
-          <text x="825" y="295" text-anchor="middle" font-size="11.5" font-weight="800" fill="#1c6b45">&#9313; 지원</text>
-          <text x="825" y="315" text-anchor="middle" font-size="13" fill="#12100e">인증서가 기업에 전달</text>
+          <rect x="720" y="269" width="210" height="62" rx="11" fill="#e9f4ee" stroke="#1c6b45" stroke-width="1.8"/>
+          <text x="825" y="293" text-anchor="middle" font-size="11.5" font-weight="800" fill="#1c6b45">&#9313; 혁신의숲</text>
+          <text x="825" y="315" text-anchor="middle" font-size="13" fill="#12100e">지원서와 인증서를 전달한다</text>
           <rect x="720" y="337" width="210" height="30" rx="15" fill="#e9f4ee" stroke="#9dc4ad" stroke-width="1.2"/>
           <text x="825" y="356" text-anchor="middle" font-size="11.5" font-weight="800" fill="#1c6b45">리멤버를 통해서만 전달</text>
 
-          <rect x="495" y="474" width="210" height="58" rx="11" fill="#fff" stroke="#1c6b45" stroke-width="1.8"/>
-          <text x="600" y="498" text-anchor="middle" font-size="11.5" font-weight="800" fill="#1c6b45">&#9314; 채용 기업</text>
-          <text x="600" y="518" text-anchor="middle" font-size="13" fill="#12100e">검증된 지원자로 성사율 상승</text>
+          <rect x="495" y="472" width="210" height="62" rx="11" fill="#fff" stroke="#8f9aa3" stroke-width="1.8"/>
+          <text x="600" y="496" text-anchor="middle" font-size="11.5" font-weight="800" fill="#5a6570">&#9314; 채용 기업</text>
+          <text x="600" y="518" text-anchor="middle" font-size="13" fill="#12100e">검증된 지원자로 채용을 성사한다</text>
 
-          <rect x="270" y="271" width="210" height="58" rx="11" fill="#fff" stroke="#c6ddd0" stroke-width="1.8"/>
-          <text x="375" y="295" text-anchor="middle" font-size="11.5" font-weight="800" fill="#4b544d">&#9315; 신규 수요</text>
-          <text x="375" y="315" text-anchor="middle" font-size="13" fill="#12100e">「우리도 올리고 싶다」</text>
+          <rect x="270" y="269" width="210" height="62" rx="11" fill="#fff" stroke="#8f9aa3" stroke-width="1.8"/>
+          <text x="375" y="293" text-anchor="middle" font-size="11.5" font-weight="800" fill="#5a6570">&#9315; 다른 스타트업</text>
+          <text x="375" y="315" text-anchor="middle" font-size="13" fill="#12100e">공고 등록을 문의한다</text>
         </g>
 
         <g>
           <rect x="20" y="110" width="250" height="68" rx="10" fill="#f4f7f5" stroke="#c6ddd0" stroke-width="1.4"/>
-          <text x="145" y="132" text-anchor="middle" font-size="11.5" font-weight="800" fill="#2c6b4d">성장 기업 풀 축적</text>
+          <text x="145" y="132" text-anchor="middle" font-size="11.5" font-weight="800" fill="#2c6b4d">혁신의숲 · 성장 기업 풀 축적</text>
           <text x="145" y="151" text-anchor="middle" font-size="12" fill="#3c4550">공고와 성장 리포트가 쌓일수록</text>
           <text x="145" y="167" text-anchor="middle" font-size="12" fill="#3c4550">구직자가 확인할 기업이 늘어남</text>
 
           <rect x="930" y="110" width="250" height="68" rx="10" fill="#f4f7f5" stroke="#c6ddd0" stroke-width="1.4"/>
-          <text x="1055" y="132" text-anchor="middle" font-size="11.5" font-weight="800" fill="#2c6b4d">검증된 인재 풀 축적</text>
+          <text x="1055" y="132" text-anchor="middle" font-size="11.5" font-weight="800" fill="#2c6b4d">혁신의숲 · 검증된 인재 풀 축적</text>
           <text x="1055" y="151" text-anchor="middle" font-size="12" fill="#3c4550">발급 인증서가 쌓일수록</text>
           <text x="1055" y="167" text-anchor="middle" font-size="12" fill="#3c4550">기업이 만나는 지원자 질이 올라감</text>
 
           <rect x="930" y="430" width="250" height="68" rx="10" fill="#f4f7f5" stroke="#c6ddd0" stroke-width="1.4"/>
-          <text x="1055" y="452" text-anchor="middle" font-size="11.5" font-weight="800" fill="#2c6b4d">신규 리드 세일즈</text>
+          <text x="1055" y="452" text-anchor="middle" font-size="11.5" font-weight="800" fill="#2c6b4d">혁신의숲 · 신규 리드 발굴</text>
           <text x="1055" y="471" text-anchor="middle" font-size="12" fill="#3c4550">성사 결과를 본 기업의 문의가</text>
           <text x="1055" y="487" text-anchor="middle" font-size="12" fill="#3c4550">리멤버 영업 퍼널로 유입</text>
 
-          <rect x="20" y="430" width="250" height="68" rx="10" fill="#f4f7f5" stroke="#c6ddd0" stroke-width="1.4"/>
-          <text x="145" y="452" text-anchor="middle" font-size="11.5" font-weight="800" fill="#2c6b4d">리멤버 계약 확대</text>
+          <rect x="20" y="430" width="250" height="68" rx="10" fill="#f2f4f6" stroke="#ccd3da" stroke-width="1.4"/>
+          <text x="145" y="452" text-anchor="middle" font-size="11.5" font-weight="800" fill="#4a5560">리멤버 · 채용 솔루션 계약 확대</text>
           <text x="145" y="471" text-anchor="middle" font-size="12" fill="#3c4550">혁신의숲 노출은 리멤버 공고를</text>
           <text x="145" y="487" text-anchor="middle" font-size="12" fill="#3c4550">통해서만 가능하므로 계약이 발생</text>
         </g>
 
         <g font-size="11" font-weight="700" fill="#c08a3e">
-          <text x="336" y="88" text-anchor="middle">되먹임</text>
-          <text x="1010" y="232" text-anchor="middle">되먹임</text>
           <text x="176" y="308" text-anchor="start">공고 증가</text>
         </g>
       </svg>
+      <div class="legend">
+        <span><i class="l1"></i>순환의 흐름</span>
+        <span><i class="l2"></i>순환이 만드는 효과</span>
+        <span><i class="l3"></i>효과가 순환으로 돌아가는 경로</span>
+        <span><i class="l4"></i>효과 사이의 연결</span>
+        <span><i class="sw g"></i>혁신의숲 담당</span>
+        <span><i class="sw r"></i>리멤버 담당</span>
+      </div>
       <div class="wheelcap">
-        <b>&#9312;</b> 구직자가 인증서를 발급받고, <b>&#9313;</b> 지원과 함께 인증서가 채용 기업에 전달되며,
-        <b>&#9314;</b> 기업은 검증된 지원자를 확보해 성사율이 상승하고,
-        <b>&#9315;</b> 그 결과를 확인한 다른 기업이 공고 등록을 문의합니다.
+        <b>&#9312; 구직자</b>가 인증서를 발급받고, <b>&#9313; 혁신의숲</b>이 지원서와 인증서를 리멤버를 통해 채용 기업에 전달하며,
+        <b>&#9314; 채용 기업</b>이 검증된 지원자로 채용을 성사하고,
+        <b>&#9315;</b> 그 결과를 확인한 <b>다른 스타트업</b>이 공고 등록을 문의합니다.
         <br><br>
-        <b>순환이 한 바퀴 돌 때마다 자산이 쌓이고, 그 자산이 다시 순환 안으로 들어갑니다(주황 화살표).</b>
+        <b>순환이 한 바퀴 돌 때마다 자산이 쌓이고, 그 자산이 다시 순환 안으로 들어갑니다.</b>
         발급 인증서가 쌓이면 <b>검증된 인재 풀</b>이 되어 &#9313;에서 기업이 만나는 지원자의 질을 올리고,
         공고와 리포트가 쌓이면 <b>성장 기업 풀</b>이 되어 &#9312;에서 구직자가 확인할 대상을 넓힙니다.
         <br><br>
