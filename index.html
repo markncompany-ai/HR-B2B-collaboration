@@ -1,11 +1,4 @@
 <!DOCTYPE html>
-<script type="application/json" id="cowork-artifact-meta">
-{
-  "name": "Remember Proposal V31",
-  "schemaVersion": 1,
-  "description": "리멤버 제안서 v3.1. PART 1/2 탭 전환 구조 도입. 02를 '스타트업 채용은 달라야 합니다'로 재작성(인지도 있는 회사 vs 스타트업 대비표, 성장을 보여줘야 하는 이유), '이미 관측되고 있다' 구조 삭제. 03에 채용공고+성장데이터 AI 교차분석 화면 추가하고 채용공고 목록 화면 제거, 신뢰→관심→지원 논리로 매력 어필 강화, 말미에 '공고가 필요하다'는 제안 블록 추가. PART 2(04~05)는 스텁."
-}
-</script>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
@@ -205,7 +198,7 @@ table.num td:first-child{width:32px;text-align:center;color:var(--ink3);font-wei
   <div class="brand">혁신의숲 · MARK &amp; COMPANY</div>
   <h1>스타트업 채용 제휴 제안</h1>
   <p class="sub">마크앤컴퍼니가 그리는 스타트업 채용의 구조</p>
-  <div class="hdr-meta"><span>2026. 08.</span><span>마크앤컴퍼니 혁신의숲</span><span>v3.1</span></div>
+  <div class="hdr-meta"><span>2026. 08.</span><span>마크앤컴퍼니 혁신의숲</span><span>v3.2</span></div>
 </header>
 
 <div class="tabs" role="tablist">
@@ -510,32 +503,64 @@ table.num td:first-child{width:32px;text-align:center;color:var(--ink3);font-wei
     <h2><span class="n">04</span>동작 방식과 선순환 구조</h2>
     <div class="head">
       구직자 흐름과 기업 발굴 흐름은 별개의 프로세스가 아니라 <b>하나의 순환</b>입니다.
-      각각 4단계로 이루어지며, 인증서와 공고를 통해 두 흐름이 연결됩니다.
+      구직자 흐름은 4단계, 기업 발굴 흐름은 5단계이며, 인증서와 공고를 통해 두 흐름이 연결됩니다.
     </div>
 
     <h3>구직자 흐름</h3>
     <div class="flow">
-      <div class="step"><div class="t">01</div><div class="d">공고 열람<br>또는 기업 검색</div></div>
+      <div class="step"><div class="t">01</div><div class="d">타 플랫폼 공고 열람<br>→ 혁신의숲에서 기업 검색</div></div>
       <div class="step us"><div class="t">02 · 혁신의숲</div><div class="d">성장 리포트로<br>회사 확인</div></div>
       <div class="step us"><div class="t">03 · 혁신의숲</div><div class="d">성장 경험<br>인증서 발급</div></div>
-      <div class="step rm"><div class="t">04 · 리멤버</div><div class="d">지원<br>이력서 + 인증서</div></div>
+      <div class="step rm"><div class="t">04 · 리멤버</div><div class="d">지원<br>이력서 + 인증서 API 전달</div></div>
     </div>
+    <p class="flownote">
+      <b>(구직자가 혁신의숲에 들어오는 이유)</b> 구직자는 플랫폼을 가리지 않고 공고를 찾아봅니다.
+      그러다 모르는 회사를 만나면 성장성과 안정성을 확인하려고 혁신의숲에서 그 기업을 검색합니다.
+      어느 플랫폼에서 본 기업이든 확인은 혁신의숲에서 이루어지며, 이 탐색은 공고를 볼 때마다 반복됩니다.
+    </p>
+    <p class="flownote">
+      <b>(검색 데이터와 공고의 매칭)</b> 마크앤컴퍼니는 이 검색 데이터와 기업 정보를 리멤버의 채용 공고와 매칭합니다.
+      매칭 결과를 근거로 구직자는 혁신의숲에서 지원합니다.
+      기업의 성장 시계열과 공고를 함께 제시하는 곳은 혁신의숲뿐이므로 구직자 유입은 이 지점에서 계속 발생합니다.
+    </p>
     <p class="flownote">
       <b>(혁신의숲 담당 구간)</b> 4단계 중 2단계와 3단계를 혁신의숲이 맡습니다.
       「이 회사가 괜찮은가」에 답하는 구간이며, 이 구간이 비어 있으면 구직자는 공고를 열람한 뒤
-      회사를 확인할 다른 경로를 찾다가 이탈합니다. 현재 채용 플랫폼에는 이 구간이 없습니다.
+      회사를 확인할 다른 경로를 찾다가 이탈합니다.
     </p>
+
+    <div class="ask">
+      <div class="t">이 구조가 리멤버에 남기는 것</div>
+      <p>혁신의숲이 수집한 지원서와 이력서, 성장 경험 인증서는
+        <span class="em">리멤버에만 제공합니다.</span>
+        지원 시점에 API로 전달하고, 리멤버가 구인 기업에 전달하며, HR 담당자가 확인합니다.</p>
+      <p>인증서를 포함한 이 자료는 <span class="em">리멤버에서만 열람할 수 있으므로</span>
+        HR 담당자는 채용 판단을 리멤버에서 내립니다.</p>
+      <p>구직자는 여러 플랫폼에 흩어진 공고를 통해 유입되지만,
+        <span class="em">최종 채용은 리멤버로 귀결됩니다.</span></p>
+    </div>
 
     <h3>기업 발굴 흐름</h3>
     <div class="flow">
-      <div class="step us"><div class="t">01 · 혁신의숲</div><div class="d">인증서·리포트를 본<br>기업의 문의</div></div>
-      <div class="step us"><div class="t">02 · 혁신의숲</div><div class="d">리드 접수<br>· 전달</div></div>
-      <div class="step rm"><div class="t">03 · 리멤버</div><div class="d">영업 · 상담</div></div>
-      <div class="step rm"><div class="t">04 · 리멤버</div><div class="d">계약 · 공고 등록</div></div>
+      <div class="step us"><div class="t">01 · 혁신의숲</div><div class="d">공고에 성장 데이터 결합<br>콘텐츠로 재구성</div></div>
+      <div class="step us"><div class="t">02 · 혁신의숲</div><div class="d">지원 증가를 확인한<br>기업의 문의</div></div>
+      <div class="step us"><div class="t">03 · 혁신의숲</div><div class="d">리드 접수<br>· 전달</div></div>
+      <div class="step rm"><div class="t">04 · 리멤버</div><div class="d">영업 · 상담</div></div>
+      <div class="step rm"><div class="t">05 · 리멤버</div><div class="d">계약 · 공고 등록</div></div>
     </div>
     <p class="flownote">
-      <b>(역할 분담)</b> 영업과 계약은 리멤버가 수행하고, 혁신의숲은 1단계와 2단계, 즉 리드가 발생하는 지점을 만들고 전달하는 구간을 담당합니다.
-      기업의 문의는 앞의 구직자 흐름이 작동한 결과이므로, 두 흐름은 하나로 연결됩니다.
+      <b>(리드가 만들어지는 지점)</b> 기업 정보를 더 잘 보이게 하는 콘텐츠는 리멤버 공고와 외부 공고에
+      혁신의숲의 성장 데이터를 결합해 재구성하는 작업입니다.
+      구직자가 확인하는 정보가 늘면 관심과 신뢰가 함께 올라가고, 지원 수가 따라 올라갑니다.
+    </p>
+    <p class="flownote">
+      <b>(리드 확보 목표)</b> 지원이 늘어난 결과를 확인한 스타트업은
+      「우리도 채용 공고를 혁신의숲에 올리고 싶은데 어떻게 하면 되느냐」고 문의합니다.
+      이 문의를 확보하는 것이 마크앤컴퍼니가 두는 리드 목표입니다.
+    </p>
+    <p class="flownote">
+      <b>(역할 분담)</b> 4단계부터 영업과 계약은 리멤버가 수행하며, 역할 자체는 지금과 같습니다.
+      다만 앞의 구직자 흐름이 작동하는 만큼 리멤버가 다루는 리드 건수는 늘어납니다.
     </p>
 
     <h3>두 흐름의 결합</h3>
@@ -675,58 +700,19 @@ table.num td:first-child{width:32px;text-align:center;color:var(--ink3);font-wei
       </tr>
     </table>
     <p class="note">
-      요율은 <b>§07의 3단계(공고 연동) 이후 지원 수와 성사율을 대조해 협의하여 확정합니다.</b>
+      요율은 <b>공고 연동 이후 지원 수와 성사율을 대조해 협의하여 확정합니다.</b>
     </p>
-  </section>
-
-  <!-- 07 -->
-  <section>
-    <h2><span class="n">07</span>추진 순서</h2>
-    <div class="head">
-      신규 고객 발굴은 마크앤컴퍼니도 중요하게 봅니다. <b>협업 방향에 합의하면 홍보와 노출은 즉시 시작합니다.</b>
-      다만 신규 리드가 지속적으로 발생하려면 공고 데이터 연동이 함께 진행되어야 합니다.
-      전체 5단계이며, 시스템 구축은 정관 변경과 신고 절차를 포함해 <b>2026년 9월 말부터 10월 사이에 완료</b>합니다.
-    </div>
-    <table class="num">
-      <tr><th>#</th><th style="width:170px">단계</th><th>내용</th><th style="width:112px">시점</th></tr>
-      <tr>
-        <td>1</td><td><b>협업 방향 합의</b></td>
-        <td>본 제안 구조에 대한 상호 확인. 이 단계를 확정하면 2단계는 즉시 진행합니다.</td>
-        <td>즉시</td>
-      </tr>
-      <tr>
-        <td>2</td><td>홍보, 노출, 공동 활동</td>
-        <td>혁신의숲 내 리멤버 채용 솔루션 노출, 공동 콘텐츠, 행사 연계를 <b>선행 제공합니다.</b></td>
-        <td>합의 직후</td>
-      </tr>
-      <tr>
-        <td>3</td><td><b>채용 공고 연동</b></td>
-        <td><b>공고 API 연동부터 착수합니다.</b> 공고가 유입되어야 성장 리포트가 생성되고 구직자 흐름이 열립니다.</td>
-        <td>합의 직후 착수</td>
-      </tr>
-      <tr>
-        <td>4</td><td>인증서와 지원 연결</td>
-        <td>성장 경험 인증서 발급과 지원 연동, 이력서와 인증서 회신까지 연결합니다.</td>
-        <td>3단계에 이어서</td>
-      </tr>
-      <tr>
-        <td>5</td><td>운영과 성과 확인</td>
-        <td>지원 수와 성사율 데이터를 대조하고, 그 결과를 근거로 수익 배분을 협의하여 확정합니다.</td>
-        <td>연동 이후</td>
-      </tr>
-    </table>
 
     <div class="ask">
       <div class="t">B2B 세일즈 협력에 대한 제안</div>
-      <p><span class="em">세일즈 협력은 2단계에서 즉시 시작합니다.</span> 선결 조건은 협업 방향 합의 하나입니다.</p>
+      <p><span class="em">세일즈 협력은 협업 방향에 합의하는 즉시 시작합니다.</span> 선결 조건은 그 합의 하나입니다.</p>
       <p>혁신의숲의 성장 데이터가 결합된 공고는 <span class="em">기존 채용 공고와 다른 상품</span>이 됩니다.
         세일즈는 이 상품을 판매하는 단계에서 성과가 커집니다.</p>
-      <p>마크앤컴퍼니는 신규 수요를 <span class="em">구조가 작동한 결과</span>로 봅니다. 3단계의 공고 연동이 그 구조를 여는 지점입니다.</p>
+      <p>마크앤컴퍼니는 신규 수요를 <span class="em">구조가 작동한 결과</span>로 봅니다. 공고 연동이 그 구조를 여는 지점입니다.</p>
     </div>
   </section>
 
   <div class="closing">
-    <p>마크앤컴퍼니가 이 사업에서 두는 목표는 스타트업의 채용이 성사되는 것이며, 수익 구조는 그 위에 설계합니다.</p>
     <p>리멤버 측 기대사항을 같은 형태로 정리해 주시면, 두 문서를 대조해 접점을 확정합니다.</p>
   </div>
   <div class="pagenav">
