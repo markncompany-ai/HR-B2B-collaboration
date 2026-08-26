@@ -267,7 +267,7 @@ h2 .n{display:inline-block;margin-right:11px;vertical-align:2px}
 </style>
 </head>
 <body>
-<!-- v4.1 -->
+<!-- v4.3 -->
 <div class="wrap">
 
 <header>
@@ -635,89 +635,110 @@ h2 .n{display:inline-block;margin-right:11px;vertical-align:2px}
       역할은 지금과 같고, 앞의 구직자 흐름이 작동하는 만큼 다루는 리드 건수가 늘어납니다.
     </p>
 
-    <h3>두 흐름의 결합</h3>
+    <h3>선순환 구조 — 한 바퀴가 다음 바퀴를 키웁니다</h3>
+    <div class="head">
+      인증서 발급에서 시작한 순환은 <b>검증된 인재 풀</b>과 <b>성장 기업 풀</b>을 남기고,
+      이 자산이 다시 순환 안으로 들어가 지원 수와 계약 건수를 키웁니다.
+      인증서가 <b>리멤버를 통해서만 전달</b>되므로 채용 실행은 리멤버로 모입니다.
+    </div>
     <div class="wheelbox">
-      <svg viewBox="0 0 1120 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="스타트업 채용 선순환 구조와 파생 효과">
+      <svg viewBox="0 0 1200 660" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="스타트업 채용 선순환 구조와 파생 효과">
         <defs>
-          <marker id="ah" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
-            <path d="M0,0 L0,6 L7,3 z" fill="#1c6b45"/>
-          </marker>
-          <marker id="ahb" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
-            <path d="M0,0 L0,6 L7,3 z" fill="#7ba490"/>
-          </marker>
+          <marker id="ah" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#1c6b45"/></marker>
+          <marker id="ahb" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#7ba490"/></marker>
+          <marker id="ahr" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#c08a3e"/></marker>
         </defs>
 
-        <circle cx="560" cy="280" r="150" fill="none" stroke="#c6ddd0" stroke-width="2" stroke-dasharray="5 6"/>
-        <path d="M 666 174 A 150 150 0 0 1 701 229" fill="none" stroke="#1c6b45" stroke-width="2.6" marker-end="url(#ah)"/>
-        <path d="M 701 331 A 150 150 0 0 1 666 386" fill="none" stroke="#1c6b45" stroke-width="2.6" marker-end="url(#ah)"/>
-        <path d="M 454 386 A 150 150 0 0 1 419 331" fill="none" stroke="#1c6b45" stroke-width="2.6" marker-end="url(#ah)"/>
-        <path d="M 419 229 A 150 150 0 0 1 454 174" fill="none" stroke="#1c6b45" stroke-width="2.6" marker-end="url(#ah)"/>
+        <circle cx="600" cy="300" r="165" fill="none" stroke="#c6ddd0" stroke-width="2" stroke-dasharray="5 6"/>
+        <path d="M 716.7 183.3 A 165 165 0 0 1 755 243.6" fill="none" stroke="#1c6b45" stroke-width="2.8" marker-end="url(#ah)"/>
+        <path d="M 755 356.4 A 165 165 0 0 1 716.7 416.7" fill="none" stroke="#1c6b45" stroke-width="2.8" marker-end="url(#ah)"/>
+        <path d="M 483.3 416.7 A 165 165 0 0 1 445 356.4" fill="none" stroke="#1c6b45" stroke-width="2.8" marker-end="url(#ah)"/>
+        <path d="M 445 243.6 A 165 165 0 0 1 483.3 183.3" fill="none" stroke="#1c6b45" stroke-width="2.8" marker-end="url(#ah)"/>
 
-        <!-- 순환에서 갈라져 나오는 파생 화살표 -->
-        <path d="M 454 174 Q 355 130 254 150" fill="none" stroke="#7ba490" stroke-width="2.2" marker-end="url(#ahb)"/>
-        <path d="M 666 174 Q 765 130 866 150" fill="none" stroke="#7ba490" stroke-width="2.2" marker-end="url(#ahb)"/>
-        <path d="M 454 386 Q 355 430 254 410" fill="none" stroke="#7ba490" stroke-width="2.2" marker-end="url(#ahb)"/>
-        <path d="M 666 386 Q 765 430 866 410" fill="none" stroke="#7ba490" stroke-width="2.2" marker-end="url(#ahb)"/>
-        <circle cx="454" cy="174" r="4.5" fill="#1c6b45"/><circle cx="666" cy="174" r="4.5" fill="#1c6b45"/>
-        <circle cx="454" cy="386" r="4.5" fill="#1c6b45"/><circle cx="666" cy="386" r="4.5" fill="#1c6b45"/>
+        <!-- 순환에서 갈라져 나가는 파생 -->
+        <path d="M 716.7 183.3 Q 820 138 922 144" fill="none" stroke="#7ba490" stroke-width="2.2" marker-end="url(#ahb)"/>
+        <path d="M 483.3 183.3 Q 380 138 278 144" fill="none" stroke="#7ba490" stroke-width="2.2" marker-end="url(#ahb)"/>
+        <path d="M 716.7 416.7 Q 820 462 922 464" fill="none" stroke="#7ba490" stroke-width="2.2" marker-end="url(#ahb)"/>
+        <circle cx="716.7" cy="183.3" r="4.5" fill="#1c6b45"/><circle cx="483.3" cy="183.3" r="4.5" fill="#1c6b45"/>
+        <circle cx="716.7" cy="416.7" r="4.5" fill="#1c6b45"/>
 
-        <circle cx="560" cy="280" r="72" fill="#e9f4ee" stroke="#1c6b45" stroke-width="2.2"/>
-        <text x="560" y="272" text-anchor="middle" font-size="14" font-weight="800" fill="#1c6b45">혁신의숲</text>
-        <text x="560" y="293" text-anchor="middle" font-size="14" font-weight="800" fill="#1c6b45">성장 데이터</text>
+        <!-- 파생끼리의 연결: 신규 리드 -> 계약 확대 -->
+        <path d="M 930 500 Q 600 632 270 500" fill="none" stroke="#7ba490" stroke-width="2.2" stroke-dasharray="6 5" marker-end="url(#ahb)"/>
+        <text x="600" y="602" text-anchor="middle" font-size="11.5" font-weight="800" fill="#5f7d6c">리멤버 영업이 리드를 계약으로 전환</text>
+
+        <!-- 파생이 순환으로 되먹임 -->
+        <path d="M 1055 182 Q 1015 244 938 290" fill="none" stroke="#c08a3e" stroke-width="2.2" marker-end="url(#ahr)"/>
+        <path d="M 145 182 Q 300 104 487 100" fill="none" stroke="#c08a3e" stroke-width="2.2" marker-end="url(#ahr)"/>
+        <path d="M 145 424 L 145 186" fill="none" stroke="#c08a3e" stroke-width="2.2" marker-end="url(#ahr)"/>
+
+        <circle cx="600" cy="300" r="76" fill="#e9f4ee" stroke="#1c6b45" stroke-width="2.2"/>
+        <text x="600" y="292" text-anchor="middle" font-size="14.5" font-weight="800" fill="#1c6b45">혁신의숲</text>
+        <text x="600" y="314" text-anchor="middle" font-size="14.5" font-weight="800" fill="#1c6b45">성장 데이터</text>
 
         <g>
-          <rect x="470" y="56" width="180" height="58" rx="11" fill="#fff" stroke="#1c6b45" stroke-width="1.8"/>
-          <text x="560" y="80" text-anchor="middle" font-size="11.5" font-weight="800" fill="#1c6b45">&#9312; 구직자</text>
-          <text x="560" y="100" text-anchor="middle" font-size="13" fill="#12100e">성장 경험 인증서 발급</text>
+          <rect x="495" y="68" width="210" height="58" rx="11" fill="#fff" stroke="#1c6b45" stroke-width="1.8"/>
+          <text x="600" y="92" text-anchor="middle" font-size="11.5" font-weight="800" fill="#1c6b45">&#9312; 구직자</text>
+          <text x="600" y="112" text-anchor="middle" font-size="13" fill="#12100e">성장 경험 인증서 발급</text>
 
-          <rect x="715" y="251" width="190" height="58" rx="11" fill="#fff" stroke="#1c6b45" stroke-width="1.8"/>
-          <text x="810" y="275" text-anchor="middle" font-size="11.5" font-weight="800" fill="#1c6b45">&#9313; 지원</text>
-          <text x="810" y="295" text-anchor="middle" font-size="13" fill="#12100e">인증서가 기업에 전달</text>
+          <rect x="720" y="271" width="210" height="58" rx="11" fill="#fff" stroke="#1c6b45" stroke-width="1.8"/>
+          <text x="825" y="295" text-anchor="middle" font-size="11.5" font-weight="800" fill="#1c6b45">&#9313; 지원</text>
+          <text x="825" y="315" text-anchor="middle" font-size="13" fill="#12100e">인증서가 기업에 전달</text>
+          <rect x="720" y="337" width="210" height="30" rx="15" fill="#e9f4ee" stroke="#9dc4ad" stroke-width="1.2"/>
+          <text x="825" y="356" text-anchor="middle" font-size="11.5" font-weight="800" fill="#1c6b45">리멤버를 통해서만 전달</text>
 
-          <rect x="470" y="446" width="180" height="58" rx="11" fill="#fff" stroke="#1c6b45" stroke-width="1.8"/>
-          <text x="560" y="470" text-anchor="middle" font-size="11.5" font-weight="800" fill="#1c6b45">&#9314; 채용 기업</text>
-          <text x="560" y="490" text-anchor="middle" font-size="13" fill="#12100e">검증된 지원자로 성사율 상승</text>
+          <rect x="495" y="474" width="210" height="58" rx="11" fill="#fff" stroke="#1c6b45" stroke-width="1.8"/>
+          <text x="600" y="498" text-anchor="middle" font-size="11.5" font-weight="800" fill="#1c6b45">&#9314; 채용 기업</text>
+          <text x="600" y="518" text-anchor="middle" font-size="13" fill="#12100e">검증된 지원자로 성사율 상승</text>
 
-          <rect x="215" y="251" width="190" height="58" rx="11" fill="#fff" stroke="#c6ddd0" stroke-width="1.8"/>
-          <text x="310" y="275" text-anchor="middle" font-size="11.5" font-weight="800" fill="#4b544d">&#9315; 신규 수요</text>
-          <text x="310" y="295" text-anchor="middle" font-size="13" fill="#12100e">「우리도 올리고 싶다」</text>
+          <rect x="270" y="271" width="210" height="58" rx="11" fill="#fff" stroke="#c6ddd0" stroke-width="1.8"/>
+          <text x="375" y="295" text-anchor="middle" font-size="11.5" font-weight="800" fill="#4b544d">&#9315; 신규 수요</text>
+          <text x="375" y="315" text-anchor="middle" font-size="13" fill="#12100e">「우리도 올리고 싶다」</text>
         </g>
 
         <g>
-          <rect x="20" y="120" width="225" height="62" rx="10" fill="#f4f7f5" stroke="#c6ddd0" stroke-width="1.4"/>
-          <text x="132" y="142" text-anchor="middle" font-size="11" font-weight="800" fill="#2c6b4d">성장 기업 풀 축적</text>
-          <text x="132" y="160" text-anchor="middle" font-size="11.5" font-weight="600" fill="#3c4550">공고와 성장 리포트가 쌓일수록</text>
-          <text x="132" y="175" text-anchor="middle" font-size="11.5" font-weight="600" fill="#3c4550">구직자의 탐색 대상 확대</text>
+          <rect x="20" y="110" width="250" height="68" rx="10" fill="#f4f7f5" stroke="#c6ddd0" stroke-width="1.4"/>
+          <text x="145" y="132" text-anchor="middle" font-size="11.5" font-weight="800" fill="#2c6b4d">성장 기업 풀 축적</text>
+          <text x="145" y="151" text-anchor="middle" font-size="12" fill="#3c4550">공고와 성장 리포트가 쌓일수록</text>
+          <text x="145" y="167" text-anchor="middle" font-size="12" fill="#3c4550">구직자가 확인할 기업이 늘어남</text>
 
-          <rect x="875" y="120" width="225" height="62" rx="10" fill="#f4f7f5" stroke="#c6ddd0" stroke-width="1.4"/>
-          <text x="987" y="142" text-anchor="middle" font-size="11" font-weight="800" fill="#2c6b4d">검증된 인재 풀 축적</text>
-          <text x="987" y="160" text-anchor="middle" font-size="11.5" font-weight="600" fill="#3c4550">발급 인증서가 늘수록</text>
-          <text x="987" y="175" text-anchor="middle" font-size="11.5" font-weight="600" fill="#3c4550">지원자 검증 자산 확대</text>
+          <rect x="930" y="110" width="250" height="68" rx="10" fill="#f4f7f5" stroke="#c6ddd0" stroke-width="1.4"/>
+          <text x="1055" y="132" text-anchor="middle" font-size="11.5" font-weight="800" fill="#2c6b4d">검증된 인재 풀 축적</text>
+          <text x="1055" y="151" text-anchor="middle" font-size="12" fill="#3c4550">발급 인증서가 쌓일수록</text>
+          <text x="1055" y="167" text-anchor="middle" font-size="12" fill="#3c4550">기업이 만나는 지원자 질이 올라감</text>
 
-          <rect x="20" y="378" width="225" height="62" rx="10" fill="#f4f7f5" stroke="#c6ddd0" stroke-width="1.4"/>
-          <text x="132" y="400" text-anchor="middle" font-size="11" font-weight="800" fill="#2c6b4d">신규 리드 세일즈</text>
-          <text x="132" y="418" text-anchor="middle" font-size="11.5" font-weight="600" fill="#3c4550">기업 문의가 리멤버</text>
-          <text x="132" y="433" text-anchor="middle" font-size="11.5" font-weight="600" fill="#3c4550">영업 퍼널로 유입</text>
+          <rect x="930" y="430" width="250" height="68" rx="10" fill="#f4f7f5" stroke="#c6ddd0" stroke-width="1.4"/>
+          <text x="1055" y="452" text-anchor="middle" font-size="11.5" font-weight="800" fill="#2c6b4d">신규 리드 세일즈</text>
+          <text x="1055" y="471" text-anchor="middle" font-size="12" fill="#3c4550">성사 결과를 본 기업의 문의가</text>
+          <text x="1055" y="487" text-anchor="middle" font-size="12" fill="#3c4550">리멤버 영업 퍼널로 유입</text>
 
-          <rect x="875" y="378" width="225" height="62" rx="10" fill="#f4f7f5" stroke="#c6ddd0" stroke-width="1.4"/>
-          <text x="987" y="400" text-anchor="middle" font-size="11" font-weight="800" fill="#2c6b4d">리멤버 계약 확대</text>
-          <text x="987" y="418" text-anchor="middle" font-size="11.5" font-weight="600" fill="#3c4550">채용 성사가 재계약과</text>
-          <text x="987" y="433" text-anchor="middle" font-size="11.5" font-weight="600" fill="#3c4550">상위 상품 판매로 연결</text>
+          <rect x="20" y="430" width="250" height="68" rx="10" fill="#f4f7f5" stroke="#c6ddd0" stroke-width="1.4"/>
+          <text x="145" y="452" text-anchor="middle" font-size="11.5" font-weight="800" fill="#2c6b4d">리멤버 계약 확대</text>
+          <text x="145" y="471" text-anchor="middle" font-size="12" fill="#3c4550">혁신의숲 노출은 리멤버 공고를</text>
+          <text x="145" y="487" text-anchor="middle" font-size="12" fill="#3c4550">통해서만 가능하므로 계약이 발생</text>
+        </g>
+
+        <g font-size="11" font-weight="700" fill="#c08a3e">
+          <text x="336" y="88" text-anchor="middle">되먹임</text>
+          <text x="1010" y="232" text-anchor="middle">되먹임</text>
+          <text x="176" y="308" text-anchor="start">공고 증가</text>
         </g>
       </svg>
       <div class="wheelcap">
         <b>&#9312;</b> 구직자가 인증서를 발급받고, <b>&#9313;</b> 지원과 함께 인증서가 채용 기업에 전달되며,
         <b>&#9314;</b> 기업은 검증된 지원자를 확보해 성사율이 상승하고,
         <b>&#9315;</b> 그 결과를 확인한 다른 기업이 공고 등록을 문의합니다.
-        공고가 늘면 구직자가 확인할 대상이 늘어나 다시 &#9312;로 돌아갑니다.
         <br><br>
-        <b>순환이 한 바퀴 돌 때마다 네 가지가 함께 쌓입니다.</b>
-        구직자 쪽에서는 <b>검증된 인재 풀</b>과 <b>성장 기업 풀</b>이 축적되어 다음 순환의 탐색 대상이 넓어지고,
-        기업 쪽에서는 <b>신규 리드</b>가 리멤버 영업 퍼널로 유입되며 <b>채용 성사가 재계약과 상위 상품 판매로</b> 이어집니다.
+        <b>순환이 한 바퀴 돌 때마다 자산이 쌓이고, 그 자산이 다시 순환 안으로 들어갑니다(주황 화살표).</b>
+        발급 인증서가 쌓이면 <b>검증된 인재 풀</b>이 되어 &#9313;에서 기업이 만나는 지원자의 질을 올리고,
+        공고와 리포트가 쌓이면 <b>성장 기업 풀</b>이 되어 &#9312;에서 구직자가 확인할 대상을 넓힙니다.
+        <br><br>
+        <b>계약이 확대되는 지점은 &#9315; 이후입니다.</b>
+        성사 결과를 확인한 기업의 문의가 <b>신규 리드</b>로 리멤버 영업에 넘어가고,
+        혁신의숲 노출은 리멤버 공고를 통해서만 가능하므로 <b>그 영업이 계약으로 전환</b>됩니다.
+        계약으로 늘어난 공고는 <b>성장 기업 풀</b>에 더해져 &#9312;의 탐색 대상을 다시 넓힙니다.
         <br><br>
         <b>이 순환의 기반은 혁신의숲의 성장 데이터입니다.</b>
         데이터가 없으면 &#9312;의 인증서 발급과 &#9314;의 지원자 검증이 성립하지 않습니다.
-        <b>신규 수요(&#9315;)는 순환의 출발점이 아니라 결과입니다.</b>
       </div>
     </div>
   </section>
